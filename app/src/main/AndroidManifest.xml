@@ -19,6 +19,9 @@
         </activity>
         <activity android:name=".lambda.LambdaActivity"/>
         <activity android:name=".sp.SpActivity"/>
+        <activity android:name=".viewPager.OneActivity"/>
+        <activity android:name=".viewPager.TwoActivity"/>
+        <activity android:name=".viewPager.FourActivity"/>
     </application>
 
 </manifest>

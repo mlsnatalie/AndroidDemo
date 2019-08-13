@@ -1,11 +1,14 @@
 package com.example.androiddemo
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.sp.SpActivity
+import com.example.androiddemo.viewPager.FourActivity
+import com.example.androiddemo.viewPager.OneActivity
+import com.example.androiddemo.viewPager.TwoActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_recyclerView_move.setOnClickListener {
 
+        }
+        btn_viewpager.setOnClickListener {
+            startActivity(Intent(this, FourActivity::class.java))
         }
     }
 
