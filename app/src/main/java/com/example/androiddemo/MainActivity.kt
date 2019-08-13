@@ -21,15 +21,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initListener()
 
-        var list: ArrayList<String>? = null
-        var list1: ArrayList<String>? = null
-        list = ArrayList()
-        list1 = ArrayList()
-        for (i in 0..1000) {
-            list.add("test$i")
-            list1.add("test" + (i * 2))
-        }
-        System.out.println(checkDiffrent(list, list1))
     }
 
     private fun initListener() {
@@ -39,19 +30,10 @@ class MainActivity : AppCompatActivity() {
         btn_sp.setOnClickListener {
             startActivity(Intent(this, SpActivity::class.java))
         }
+        btn_recyclerView_move.setOnClickListener {
+
+        }
     }
 
-    private fun checkDiffrent(list: List<String>, list1: List<String>): Boolean {
-
-        if (list.size != list1.size) {
-            return false
-        }
-        for (str in list) {
-            if (!list1.contains(str)) {
-                return false
-            }
-        }
-        return true
-    }
 }
 
