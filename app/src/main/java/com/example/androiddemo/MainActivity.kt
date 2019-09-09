@@ -4,10 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androiddemo.lambda.LambdaActivity
+import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
 import com.example.androiddemo.viewPager.FourActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_demo.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainActivity = MainActivity()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_demo)
         initListener()
 
     }
@@ -38,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_rx_java.setOnClickListener {
             startActivity(Intent(this, RxJavaActivity::class.java))
+        }
+        btn_Matisse_rxPermission.setOnClickListener {
+            startActivity(Intent(this, MatisseRxPermissionActivity::class.java))
         }
     }
 }

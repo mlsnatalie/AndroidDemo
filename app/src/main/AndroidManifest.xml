@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools" package="com.example.androiddemo">
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
             android:name=".DemoApplication"
             android:allowBackup="true"
@@ -23,6 +26,7 @@
         <activity android:name=".viewPager.TwoActivity"/>
         <activity android:name=".viewPager.FourActivity"/>
         <activity android:name=".rxjava.RxJavaActivity"/>
+        <activity android:name=".matisseRxpermission.MatisseRxPermissionActivity"/>
     </application>
 
 </manifest>
