@@ -12,6 +12,7 @@ import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
 import io.reactivex.observers.DisposableObserver
 import com.zhihu.matisse.engine.impl.GlideEngine
+import com.zhihu.matisse.internal.entity.CaptureStrategy
 import kotlinx.android.synthetic.main.activity_matisse_main.*
 
 
@@ -65,15 +66,17 @@ class MatisseRxPermissionActivity : AppCompatActivity() {
 //                .forResult(100)
 
             Matisse.from(this)
-                .choose(MimeType.allOf())
-                .countable(true)
-                .maxSelectable(9)
-//                .addFilter(GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
-                .gridExpectedSize(resources.getDimensionPixelSize(R.dimen.grid_expected_size_main))
-                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
-                .thumbnailScale(0.85f)
-                .imageEngine(MyGlideEngine())
-                .forResult(REQUEST_CODE_CHOOSE)
+                .choose(MimeType.allOf()) //照片视频全部显示
+                .countable(true) //有序选择图片
+                .maxSelectable(9) //最大选择数量为9
+                .capture(true) //图片显示表格的大小getResources()
+                .captureStrategy(CaptureStrategy(true, "com.example.androiddemo.fileprovider")) //
+//                .addFilter(GifSizeFilter(320, 320, 5 * Filter.K * Filter.K)) //过滤器
+                .gridExpectedSize(resources.getDimensionPixelSize(R.dimen.grid_expected_size_main)) //图片显示表格的大小getResources()
+                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED) //图像选择和预览活动所需的方向。
+                .thumbnailScale(0.85f) //缩放比例
+                .imageEngine(MyGlideEngine()) //图片加载方式
+                .forResult(REQUEST_CODE_CHOOSE) //请求码
         }
     }
 
