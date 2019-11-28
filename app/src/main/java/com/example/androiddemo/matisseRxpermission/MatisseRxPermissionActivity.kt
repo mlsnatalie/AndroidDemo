@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_matisse_main.*
  * @author Menglingshuai
  * @date 2019-09-09.
  * email：mlsnatalie@163.com
- * description：重新设计了相册的布局，有这个需求的时候可以用到。
+ * description：重新设计了相册的布局，有这个需求的时候可以用到。知乎的相册布局
  */
 class MatisseRxPermissionActivity : AppCompatActivity() {
 

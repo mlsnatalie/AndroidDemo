@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -11,54 +10,63 @@
             android:id="@+id/btn_lambda"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:text="Lambda表达式"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="Lambda表达式"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     <Button
             android:id="@+id/btn_sp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_lambda"
+            android:text="存储List到sp中"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="存储List到sp中"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_lambda" />
 
     <Button
             android:id="@+id/btn_recyclerView_move"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp"
+            android:text="将recyclerView中的item移动到制定位置"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="将recyclerView中的item移动到制定位置"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_sp" />
 
     <Button
             android:id="@+id/btn_viewpager"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView_move"
+            android:text="viewPager"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="viewPager"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView_move" />
 
     <Button
             android:id="@+id/btn_rx_java"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_viewpager"
+            android:text="RxJava"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="RxJava"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_viewpager" />
 
     <Button
             android:id="@+id/btn_Matisse_rxPermission"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rx_java"
+            android:text="知乎图片选择器和动态权限"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="知乎图片选择器和动态权限"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_rx_java" />
+
+    <EditText
+            android:id="@+id/btn_edit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Matisse_rxPermission" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
