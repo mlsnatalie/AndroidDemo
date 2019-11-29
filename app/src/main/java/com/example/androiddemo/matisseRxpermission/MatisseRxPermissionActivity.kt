@@ -4,9 +4,12 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemo.R
+import com.example.androiddemo.glide.GlideApp
+import com.example.androiddemo.utils.FileUtil
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
@@ -14,6 +17,7 @@ import io.reactivex.observers.DisposableObserver
 import com.zhihu.matisse.engine.impl.GlideEngine
 import com.zhihu.matisse.internal.entity.CaptureStrategy
 import kotlinx.android.synthetic.main.activity_matisse_main.*
+import java.io.File
 
 
 /**
@@ -88,7 +92,31 @@ class MatisseRxPermissionActivity : AppCompatActivity() {
 
             val result = Matisse.obtainResult(data)
             tv_result.text = result.toString()
+            val imageUrl = FileUtil.getRealFilePathFromUri(this, result[0].toString().toUri())
+            GlideApp.with(this)
+                .load(imageUrl)
+                .centerCrop()
+                .into(image_view)
         }
+    }
+
+    /**
+     * KTX模块中的代码，我拷贝了过来
+     */
+
+    fun String.toUri(): Uri = Uri.parse(this)
+
+    /**
+     * Creates a Uri from the given file.
+     *
+     * @see Uri.fromFile
+     */
+    fun File.toUri(): Uri = Uri.fromFile(this)
+
+    /** Creates a [File] from the given [Uri]. */
+    fun Uri.toFile(): File {
+        require(scheme == "file") { "Uri lacks 'file' scheme: $this" }
+        return File(path)
     }
 
 }
