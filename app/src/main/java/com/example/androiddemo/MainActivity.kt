@@ -3,6 +3,7 @@ package com.example.androiddemo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
@@ -42,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_Matisse_rxPermission.setOnClickListener {
             startActivity(Intent(this, MatisseRxPermissionActivity::class.java))
+        }
+        view_self?.setOnClickListener {
+            startActivity(Intent(this, SelfViewActivity::class.java))
         }
     }
 }
