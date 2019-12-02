@@ -28,6 +28,7 @@
         <activity android:name=".rxjava.RxJavaActivity"/>
         <activity android:name=".matisseRxpermission.MatisseRxPermissionActivity"/>
         <activity android:name=".ViewSelf.SelfViewActivity"/>
+        <activity android:name=".animation.AnimationActivity"/>
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.example.androiddemo.fileprovider"

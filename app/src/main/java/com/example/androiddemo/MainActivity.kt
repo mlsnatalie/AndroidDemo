@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androiddemo.ViewSelf.SelfViewActivity
+import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         mainActivity = MainActivity()
         setContentView(R.layout.activity_main_demo)
         initListener()
-
     }
 
     private fun initListener() {
@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
         }
         view_self?.setOnClickListener {
             startActivity(Intent(this, SelfViewActivity::class.java))
+        }
+        btn_animation?.setOnClickListener {
+            startActivity(Intent(this, AnimationActivity::class.java))
         }
     }
 }
