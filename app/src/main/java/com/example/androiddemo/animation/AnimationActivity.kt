@@ -4,6 +4,7 @@ import android.animation.*
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.Animation
+import android.view.animation.BounceInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemo.R
 import kotlinx.android.synthetic.main.activity_animation.*
@@ -20,7 +21,7 @@ class AnimationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animation)
         btn_start_animation.setOnClickListener {
-            anim6()
+            anim7()
         }
     }
 
@@ -134,5 +135,10 @@ class AnimationActivity : AppCompatActivity() {
         animSet.play(rotate).with(fadeInOut).after(moveIn)
         animSet.duration = 5000
         animSet.start()
+    }
+
+    private fun anim7() {
+        tv_text.animate().x(500f).y(500f).alpha(0f).setDuration(5000L).translationX(500f).translationY(500f).rotation(360f)
+            .interpolator = BounceInterpolator()
     }
 }
