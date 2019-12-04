@@ -1,6 +1,7 @@
 package com.example.androiddemo.animation
 
 import android.animation.*
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.Animation
@@ -22,6 +23,9 @@ class AnimationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_animation)
         btn_start_animation.setOnClickListener {
             anim7()
+        }
+        btn_start_wave_animation?.setOnClickListener {
+            startActivity(Intent(this, WaveActivity::class.java))
         }
     }
 

@@ -53,6 +53,16 @@
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintRight_toRightOf="parent"/>
 
+   <Button
+           android:id="@+id/btn_start_wave_animation"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="开启水波纹扩散动画"
+           android:layout_margin="40dp"
+           android:layout_marginBottom="40dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"/>
+
    <com.example.androiddemo.animation.MyAnimView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
