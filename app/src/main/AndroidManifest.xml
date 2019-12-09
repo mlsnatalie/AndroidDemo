@@ -30,6 +30,7 @@
         <activity android:name=".ViewSelf.SelfViewActivity"/>
         <activity android:name=".animation.AnimationActivity"/>
         <activity android:name=".animation.WaveActivity"/>
+        <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity"/>
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.example.androiddemo.fileprovider"

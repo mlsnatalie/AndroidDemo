@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
+import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
@@ -49,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_animation?.setOnClickListener {
             startActivity(Intent(this, AnimationActivity::class.java))
+        }
+        btn_CoordinatorLayout?.setOnClickListener {
+            startActivity(Intent(this, CoordinatorLayoutActivity::class.java))
         }
     }
 }
