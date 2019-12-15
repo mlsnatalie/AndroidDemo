@@ -31,6 +31,7 @@
         <activity android:name=".animation.AnimationActivity"/>
         <activity android:name=".animation.WaveActivity"/>
         <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity"/>
+        <activity android:name=".fragment.NewFragmentActivity"/>
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.example.androiddemo.fileprovider"

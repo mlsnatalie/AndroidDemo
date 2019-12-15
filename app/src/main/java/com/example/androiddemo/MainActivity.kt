@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
+import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
@@ -53,6 +54,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_CoordinatorLayout?.setOnClickListener {
             startActivity(Intent(this, CoordinatorLayoutActivity::class.java))
+        }
+        btn_fragment.setOnClickListener {
+            startActivity(Intent(this, NewFragmentActivity::class.java))
         }
     }
 }
