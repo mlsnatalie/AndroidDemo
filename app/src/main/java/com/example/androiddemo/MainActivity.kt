@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
+import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_fragment.setOnClickListener {
             startActivity(Intent(this, NewFragmentActivity::class.java))
+        }
+        btn_edit_text.setOnClickListener {
+            startActivity(Intent(this, EditTextActivity::class.java))
         }
     }
 }

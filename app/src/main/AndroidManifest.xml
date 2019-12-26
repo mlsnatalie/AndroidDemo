@@ -32,6 +32,12 @@
         <activity android:name=".animation.WaveActivity"/>
         <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity"/>
         <activity android:name=".fragment.NewFragmentActivity"/>
+        <activity android:name=".edittext.EditTextActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+
+
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.example.androiddemo.fileprovider"
