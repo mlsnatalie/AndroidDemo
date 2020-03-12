@@ -16,8 +16,11 @@ import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
+import com.example.androiddemo.utils.ObservableScrollView
+import com.example.androiddemo.utils.ObservableScrollView.OnScrollStatusListener
 import com.example.androiddemo.viewPager.FourActivity
 import kotlinx.android.synthetic.main.activity_main_demo.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         mainActivity = MainActivity()
         setContentView(R.layout.activity_main_demo)
         initListener()
+        initScrollView()
+
     }
 
     private fun initListener() {
@@ -69,6 +74,18 @@ class MainActivity : AppCompatActivity() {
         btn_draw.setOnClickListener {
             startActivity(Intent(this, DrawActivity::class.java))
         }
+    }
+
+    private fun initScrollView() {
+        scroll_view.setOnScrollStatusListener(object : OnScrollStatusListener {
+            override fun onScrolling() {
+                Log.e("aaaddd", "滑动")
+            }
+
+            override fun onScrollStop() {
+                Log.e("aaaddd", "停止滑动")
+            }
+        })
     }
 }
 
