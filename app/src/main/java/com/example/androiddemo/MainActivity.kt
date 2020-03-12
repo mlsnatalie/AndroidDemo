@@ -3,9 +3,13 @@ package com.example.androiddemo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MotionEvent
+import android.view.View
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
+import com.example.androiddemo.draw.DrawActivity
 import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.lambda.LambdaActivity
@@ -61,6 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_edit_text.setOnClickListener {
             startActivity(Intent(this, EditTextActivity::class.java))
+        }
+        btn_draw.setOnClickListener {
+            startActivity(Intent(this, DrawActivity::class.java))
         }
     }
 }
