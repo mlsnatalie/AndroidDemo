@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity() {
         btn_draw.setOnClickListener {
             startActivity(Intent(this, DrawActivity::class.java))
         }
+        btn_draw_support.setOnClickListener {
+
+        }
     }
 
     private fun initScrollView() {

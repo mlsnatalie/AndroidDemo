@@ -1,9 +1,12 @@
 package com.example.androiddemo.lambda
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemo.R
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * @author Menglingshuai
@@ -15,6 +18,10 @@ class LambdaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lambda)
+
+        val i = dateToWeek(formatYmd(1588089600000))
+        Log.e("aaaddd", i)
+
 
         val person = listOf(
             Person("刘亦菲", 15),
@@ -34,6 +41,49 @@ class LambdaActivity : AppCompatActivity() {
         indexOfFirst(person)
         groupBy(person)
         flatMap()
+    }
+
+    /**
+     * 根据日期获取 星期 （2019-05-06 ——> 星期一）
+     * @param datetime
+     * @return
+     */
+    fun dateToWeek(datetime: String?): String? {
+        val f = SimpleDateFormat("yyyy-MM-dd")
+        val weekDays =
+            arrayOf("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+        val cal: Calendar = Calendar.getInstance()
+        val date: Date
+        try {
+            date = f.parse(datetime)
+            cal.setTime(date)
+        } catch (e: ParseException) {
+            e.printStackTrace()
+        }
+        //一周的第几天
+        var w: Int = cal.get(Calendar.DAY_OF_WEEK) - 1
+        if (w < 0) w = 0
+        return weekDays[w]
+    }
+
+    fun formatYmdHms(time: Long): String? {
+        val formatter =
+            SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        formatter.timeZone = TimeZone.getTimeZone(
+            String.format("GMT+%02d:00", 8)
+        )
+        return formatter.format(Date(time))
+    }
+
+    fun formatYmd(time: Long): String? {
+        val formatter = SimpleDateFormat("yyyy-MM-dd")
+        formatter.timeZone = TimeZone.getTimeZone(
+            String.format(
+                "GMT+%02d:00",
+                8
+            )
+        )
+        return formatter.format(Date(time))
     }
 
     private fun findTheOldest(person: List<Person>) {

@@ -37,6 +37,8 @@
                 android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity android:name=".draw.DrawActivity"/>
 
+        <activity android:name=".support.SupportTextActivity"/>
+
 
 
         <provider
