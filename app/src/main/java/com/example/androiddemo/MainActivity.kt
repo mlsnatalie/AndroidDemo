@@ -8,6 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
+import com.example.androiddemo.circle.CirCleActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
 import com.example.androiddemo.draw.DrawActivity
 import com.example.androiddemo.edittext.EditTextActivity
@@ -76,6 +77,10 @@ class MainActivity : AppCompatActivity() {
         }
         btn_draw_support.setOnClickListener {
 
+        }
+
+        btn_draw_circle.setOnClickListener {
+            startActivity(Intent(this, CirCleActivity::class.java))
         }
     }
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="num_progress_background" format="color" />
+        <attr name="num_progress_foreground" format="color" />
+    </declare-styleable>
+</resources>

@@ -38,6 +38,7 @@
         <activity android:name=".draw.DrawActivity"/>
 
         <activity android:name=".support.SupportTextActivity"/>
+        <activity android:name=".circle.CirCleActivity"/>
 
 
 
