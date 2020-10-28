@@ -17,7 +17,13 @@ class CirCleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_circle)
-        circle.setModel(CircleView.CircleModel.MODEL_DETAIL)
-        circle.setScore(80)
+        circle_one.setModel(CircleView.CircleModel.MODEL_DETAIL)
+        circle_one.set180Score(80)
+
+        circle_two.setModel(CircleView.CircleModel.MODEL_SINGLE)
+        circle_two.set360Score(40)
+
+        circle_three.setModel(CircleView.CircleModel.MODEL_RING)
+        circle_three.set180Score(40)
     }
 }

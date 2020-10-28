@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -63,6 +65,7 @@ public class CircleView extends View {
     private CircleModel model = CircleModel.MODE_NONE;
     private float mSweepAngle; //角度
     private float mStartAngle = 90;//开始角度
+    private LinearGradient mGradient;
 
     private void init(Context context) {
         mContext = context;
@@ -112,6 +115,7 @@ public class CircleView extends View {
         return paint;
     }
 
+    @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -134,6 +138,62 @@ public class CircleView extends View {
             canvas.drawArc(oval, -180, 90, false, mProgressPaint);
             return;
         }
+
+        if (model == CircleModel.MODEL_SINGLE) {
+            mBackGroundColor = Color.parseColor("#F0F0F0");
+            int backGroundStrokeWidth = dp2px(4);
+            int foreGroundStrokeWidth = dp2px(8);
+            mProgressPaint.setStrokeWidth(backGroundStrokeWidth);
+
+            //绘制背景
+            int cx = mWidth / 2;
+            int cy = mHeight / 2;
+            int radius = mWidth / 2 - backGroundStrokeWidth;
+            mProgressPaint.setShader(null);
+            mProgressPaint.setColor(mBackGroundColor);
+            canvas.drawCircle(cx, cy, radius, mProgressPaint);
+
+            mProgressPaint.setStrokeWidth(foreGroundStrokeWidth);
+            radius = mWidth / 2 - foreGroundStrokeWidth;
+            //绘制前景 进度
+            int left = mWidth / 2 - radius;
+            int top = mHeight / 2 - radius;
+            int right = mWidth - foreGroundStrokeWidth;
+            int bottom = mHeight - foreGroundStrokeWidth;
+            @SuppressLint("DrawAllocation") RectF oval = new RectF(left, top, right, bottom);
+            mGradient = new LinearGradient(left, top, right, bottom,
+                    Color.parseColor("#FFB121")
+                    , Color.parseColor("#FF7A21"),
+                    Shader.TileMode.MIRROR);
+            mProgressPaint.setShader(mGradient);
+            canvas.drawArc(oval, mStartAngle, mSweepAngle, false, mProgressPaint);
+            return;
+
+        }
+
+        if (model == CircleModel.MODEL_RING) {
+            //绘制背景
+            int cx = mWidth / 2;
+            int cy = mHeight / 2;
+            int radius = mWidth / 2 - mStrokeWidth;
+//            mProgressPaint.setShader(null);
+//            mProgressPaint.setColor(mBackgroundColor);
+//            canvas.drawCircle(cx, cy, radius, mProgressPaint);
+
+            //绘制前景 进度
+            int left = mWidth / 2 - radius;
+            int top = mHeight / 2 - radius;
+            int right = mWidth - mStrokeWidth;
+            int bottom = mHeight - mStrokeWidth;
+            RectF oval = new RectF(left, top, right, bottom);
+
+            mProgressPaint.setColor(mBackGroundColor);
+            canvas.drawArc(oval, -180, 180, false, mProgressPaint);
+
+            mProgressPaint.setColor(mForegroundColor);
+            canvas.drawArc(oval, -180, mSweepAngle, false, mProgressPaint);
+            return;
+        }
     }
 
     /**
@@ -147,8 +207,16 @@ public class CircleView extends View {
     /**
      * 设置分数
      */
-    public void setScore(int score) {
+    public void set180Score(int score) {
         mSweepAngle = 180 * score / 100f;
+        postInvalidate();
+    }
+
+    /**
+     * 设置分数
+     */
+    public void set360Score(int score) {
+        mSweepAngle = 360 * score / 100f;
         postInvalidate();
     }
 
