@@ -15,6 +15,7 @@ import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
+import com.example.androiddemo.rotate.RotateAnimationActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
 import com.example.androiddemo.utils.ObservableScrollView
@@ -81,6 +82,9 @@ class MainActivity : AppCompatActivity() {
 
         btn_draw_circle.setOnClickListener {
             startActivity(Intent(this, CirCleActivity::class.java))
+        }
+        btn_rotate_animation.setOnClickListener {
+            startActivity(Intent(this, RotateAnimationActivity::class.java))
         }
     }
 
