@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_option_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="40pt">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_option_content"-->
+<!--        style="@style/Font34_Color333"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:text="B. 黄金屋" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_correct_tips"-->
+<!--        android:layout_width="128pt"-->
+<!--        android:layout_height="52pt"-->
+<!--        android:layout_marginRight="160pt"-->
+<!--        android:background="@drawable/shape_live_corrent_tips_btn_bg"-->
+<!--        android:gravity="center"-->
+<!--        android:text="正确"-->
+<!--        android:textColor="@color/color_live_white"-->
+<!--        android:textSize="28pt"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_people_count"-->
+<!--        style="@style/Font32_Color333_Bold"-->
+<!--        android:textColor="@color/color_live_999999"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:text="3210人" />-->
+</android.support.constraint.ConstraintLayout>
+

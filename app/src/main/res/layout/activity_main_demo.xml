@@ -6,95 +6,153 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <Button
-            android:id="@+id/btn_lambda"
-            android:layout_width="200dp"
+    <com.example.androiddemo.utils.ObservableScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lambda表达式"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-            android:id="@+id/btn_sp"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="存储List到sp中"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_lambda" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-            android:id="@+id/btn_recyclerView_move"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="将recyclerView中的item移动到制定位置"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp" />
+            <Button
+                    android:id="@+id/btn_lambda"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lambda表达式"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-            android:id="@+id/btn_viewpager"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="viewPager"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView_move" />
+            <Button
+                    android:id="@+id/btn_sp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="存储List到sp中"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_lambda" />
 
-    <Button
-            android:id="@+id/btn_rx_java"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="RxJava"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_viewpager" />
+            <Button
+                    android:id="@+id/btn_recyclerView_move"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="将recyclerView中的item移动到制定位置"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_sp" />
 
-    <Button
-            android:id="@+id/btn_Matisse_rxPermission"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="知乎图片选择器和动态权限"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rx_java" />
+            <Button
+                    android:id="@+id/btn_viewpager"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="viewPager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_recyclerView_move" />
 
-    <Button
-            android:id="@+id/view_self"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="自定义View"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_Matisse_rxPermission" />
+            <Button
+                    android:id="@+id/btn_rx_java"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="RxJava"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_viewpager" />
 
-    <Button
-            android:id="@+id/btn_animation"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="属性动画"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_self" />
+            <Button
+                    android:id="@+id/btn_Matisse_rxPermission"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="知乎图片选择器和动态权限"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_rx_java" />
 
-    <Button
-            android:id="@+id/btn_CoordinatorLayout"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="CoordinatorLayout布局"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_animation" />
+            <Button
+                    android:id="@+id/view_self"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="自定义View"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_Matisse_rxPermission" />
 
-    <Button
-            android:id="@+id/btn_fragment"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="CoordinatorLayout布局"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_CoordinatorLayout" />
+            <Button
+                    android:id="@+id/btn_animation"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="属性动画"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_self" />
+
+            <Button
+                    android:id="@+id/btn_CoordinatorLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="CoordinatorLayout布局"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_animation" />
+
+            <Button
+                    android:id="@+id/btn_fragment"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="CoordinatorLayout布局"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_CoordinatorLayout" />
+
+            <Button
+                    android:id="@+id/btn_edit_text"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="editText随键盘滑动"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_fragment" />
+
+            <Button
+                    android:id="@+id/btn_draw"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="自定义view中draw点方法"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_edit_text" />
+
+            <Button
+                    android:id="@+id/btn_draw_support"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="画投票占比文本的方法"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_draw" />
+
+            <Button
+                    android:id="@+id/btn_draw_circle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="画圆和圆环"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_draw_support" />
+
+            <Button
+                    android:id="@+id/btn_rotate_animation"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="旋转动画"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_draw_circle" />
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.example.androiddemo.utils.ObservableScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,9 @@
 package com.example.androiddemo.fragment;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,10 +19,16 @@ import com.example.androiddemo.R;
  * description：
  */
 public class NewFragmentActivity extends AppCompatActivity {
+
+    public CountDownTimer countDownTimer;
+    private TextView title_bar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_fragment);
+        title_bar = findViewById(R.id.title_bar);
+        intitTime(676L);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 //        Fragment destFragment = getActivity().getSupportFragmentManager().findFragmentByTag(fragmentName);
         Fragment destFragment = new TestFragment();
@@ -37,5 +46,17 @@ public class NewFragmentActivity extends AppCompatActivity {
             transaction.add(R.id.fragment_container, destFragment, destFragment.getClass().getName());
         }
         transaction.commit();
+    }
+
+    private void intitTime(Long time) {
+        countDownTimer = new CountDownTimer(time, 1000) {
+            public void onTick(long millisUntilFinished) {
+                title_bar.setText(TimeTools.getCountTimeByLong(millisUntilFinished));
+            }
+            public void onFinish() {
+                //倒计时结束
+                title_bar.setText("0000");
+            }
+        }.start();
     }
 }
