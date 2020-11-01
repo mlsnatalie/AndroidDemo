@@ -40,6 +40,7 @@
         <activity android:name=".support.SupportTextActivity"/>
         <activity android:name=".circle.CirCleActivity"/>
         <activity android:name=".rotate.RotateAnimationActivity"/>
+        <activity android:name=".okhttp.OkhttpActivity"/>
 
 
 
