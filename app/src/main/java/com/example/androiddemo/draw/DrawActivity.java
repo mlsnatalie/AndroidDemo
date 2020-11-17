@@ -27,11 +27,16 @@ import com.example.androiddemo.R;
 public class DrawActivity extends AppCompatActivity {
 
     private RadioButton rb_liangziduokong;
+    private DrawView circle_two;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw);
+        circle_two = findViewById(R.id.circle_two);
+        circle_two.set180Score(90);
+        circle_two.setModel(DrawView.CircleModel.MODEL_LINE);
+
 
 //        final Paint mPaint = new Paint();
 //        mPaint.setStrokeWidth(10);
@@ -43,49 +48,49 @@ public class DrawActivity extends AppCompatActivity {
 //            }
 //        });
 
-        rb_liangziduokong = (RadioButton) findViewById(R.id.rb_liangziduokong);
-
-        rb_liangziduokong.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                float height = rb_liangziduokong.getHeight();
-                float width = rb_liangziduokong.getWidth();
-                float top = rb_liangziduokong.getTop();
-                float bottom = rb_liangziduokong.getBottom();
-                float left = rb_liangziduokong.getLeft();
-                float right = rb_liangziduokong.getRight();
-
-                Bitmap b = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
-                Canvas canvas = new Canvas(b);
-
-
-                //文本画笔
-                TextPaint textPaint = new TextPaint();
-                textPaint.setAntiAlias(true);
-                textPaint.setTextSize(20);
-                //文本宽高
-                String text = "20";
-                float textWidth = textPaint.measureText(text);
-                float textHeight = textPaint.getTextSize();
-
-
-                // 横线起始点和结束点坐标
-                float startX, startY, endX, endY;
-                startX = right;
-                startY = bottom;
-                endX = startX + textWidth;
-                endY = startY + textHeight;
-
-
-                // 价格文本显示坐标
-                float priceX, priceY;
-                priceX = right;
-                priceY = bottom;
-
-                textPaint.setColor(Color.YELLOW);
-                canvas.drawText(text, priceX, priceY, textPaint);
-            }
-        });
+//        rb_liangziduokong = (RadioButton) findViewById(R.id.rb_liangziduokong);
+//
+//        rb_liangziduokong.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//            @Override
+//            public void onGlobalLayout() {
+//                float height = rb_liangziduokong.getHeight();
+//                float width = rb_liangziduokong.getWidth();
+//                float top = rb_liangziduokong.getTop();
+//                float bottom = rb_liangziduokong.getBottom();
+//                float left = rb_liangziduokong.getLeft();
+//                float right = rb_liangziduokong.getRight();
+//
+//                Bitmap b = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
+//                Canvas canvas = new Canvas(b);
+//
+//
+//                //文本画笔
+//                TextPaint textPaint = new TextPaint();
+//                textPaint.setAntiAlias(true);
+//                textPaint.setTextSize(20);
+//                //文本宽高
+//                String text = "20";
+//                float textWidth = textPaint.measureText(text);
+//                float textHeight = textPaint.getTextSize();
+//
+//
+//                // 横线起始点和结束点坐标
+//                float startX, startY, endX, endY;
+//                startX = right;
+//                startY = bottom;
+//                endX = startX + textWidth;
+//                endY = startY + textHeight;
+//
+//
+//                // 价格文本显示坐标
+//                float priceX, priceY;
+//                priceX = right;
+//                priceY = bottom;
+//
+//                textPaint.setColor(Color.YELLOW);
+//                canvas.drawText(text, priceX, priceY, textPaint);
+//            }
+//        });
     }
 
 }

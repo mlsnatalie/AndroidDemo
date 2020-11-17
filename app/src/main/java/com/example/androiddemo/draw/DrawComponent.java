@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
@@ -21,20 +22,23 @@ import com.example.androiddemo.R;
  * email：mlsnatalie@163.com
  * description：
  */
-public class DrawComponent extends FrameLayout {
+public class DrawComponent extends View {
 
     private Context context;
 
     public DrawComponent(@NonNull Context context) {
         super(context);
+        init(context);
     }
 
     public DrawComponent(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init(context);
     }
 
     public DrawComponent(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init(context);
     }
 
     public DrawComponent(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
@@ -44,7 +48,7 @@ public class DrawComponent extends FrameLayout {
     }
 
     private void init(Context context) {
-        LayoutInflater.from(context).inflate(R.layout.activity_edit_text, null);
+//        LayoutInflater.from(context).inflate(R.layout.component_draw, this);
         findView();
     }
 
@@ -69,7 +73,7 @@ public class DrawComponent extends FrameLayout {
         textPaint.setAntiAlias(true);
         textPaint.setTextSize(20);
         //文本宽高
-        String text = "20";
+        String text = "40";
         float textWidth = textPaint.measureText(text);
         float textHeight = textPaint.getTextSize();
 
@@ -84,10 +88,15 @@ public class DrawComponent extends FrameLayout {
 
         // 价格文本显示坐标
         float priceX, priceY;
-        priceX = 10;
-        priceY = 20;
+        priceX = 100;
+        priceY = 200;
 
-        textPaint.setColor(Color.YELLOW);
+        textPaint.setColor(Color.RED);
         canvas.drawText(text, priceX, priceY, textPaint);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 }
