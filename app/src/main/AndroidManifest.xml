@@ -42,6 +42,7 @@
         <activity android:name=".circle.CirCleActivity"/>
         <activity android:name=".rotate.RotateAnimationActivity"/>
         <activity android:name=".okhttp.OkhttpActivity"/>
+        <activity android:name=".jetPack.JetPackActivity"/>
 
 
         <provider

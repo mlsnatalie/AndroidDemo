@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
-import android.view.View
-import android.widget.Button
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.circle.CirCleActivity
@@ -14,17 +11,16 @@ import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
 import com.example.androiddemo.draw.DrawActivity
 import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
+import com.example.androiddemo.jetPack.JetPackActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.okhttp.OkhttpActivity
 import com.example.androiddemo.rotate.RotateAnimationActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
-import com.example.androiddemo.utils.ObservableScrollView
 import com.example.androiddemo.utils.ObservableScrollView.OnScrollStatusListener
 import com.example.androiddemo.viewPager.FourActivity
 import kotlinx.android.synthetic.main.activity_main_demo.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -90,6 +86,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_okhttp.setOnClickListener {
             startActivity(Intent(this, OkhttpActivity::class.java))
+        }
+        btn_jetPack.setOnClickListener {
+            startActivity(Intent(this, JetPackActivity::class.java))
         }
     }
 
