@@ -2,4 +2,10 @@
     <string name="app_name">AndroidDemo</string>
     <string name="permission_request_denied">Permission request denied</string>
     <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
+
+    <string name="home_page">首页</string>
+    <string name="master_page">大咖</string>
+    <string name="stock_page">选股</string>
+    <string name="quote_page">行情</string>
+    <string name="top_line_page">头条</string>
 </resources>

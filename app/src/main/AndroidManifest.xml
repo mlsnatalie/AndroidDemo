@@ -44,7 +44,6 @@
         <activity android:name=".okhttp.OkhttpActivity"/>
 
 
-
         <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="com.example.androiddemo.fileprovider"
