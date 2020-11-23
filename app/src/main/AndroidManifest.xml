@@ -43,6 +43,7 @@
         <activity android:name=".rotate.RotateAnimationActivity"/>
         <activity android:name=".okhttp.OkhttpActivity"/>
         <activity android:name=".jetPack.JetPackActivity"/>
+        <activity android:name=".activity.NotificationActivity"/>
 
 
         <provider
