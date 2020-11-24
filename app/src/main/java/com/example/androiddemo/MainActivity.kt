@@ -13,6 +13,7 @@ import com.example.androiddemo.draw.DrawActivity
 import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.jetPack.JetPackActivity
+import com.example.androiddemo.jetPack.NewJetPackActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.okhttp.OkhttpActivity
@@ -88,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, OkhttpActivity::class.java))
         }
         btn_jetPack.setOnClickListener {
-            startActivity(Intent(this, JetPackActivity::class.java))
+            startActivity(Intent(this, NewJetPackActivity::class.java))
         }
         btn_remoteViews_notification.setOnClickListener { startActivity((Intent(this, NotificationActivity::class.java))) }
     }
