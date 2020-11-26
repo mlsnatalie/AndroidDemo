@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
-            name="user"
-            type="com.example.androiddemo.jetPack.User" />
+            name="viewmodel"
+            type="com.example.androiddemo.jetPack.UserModel" />
     </data>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/color_333333"
-        android:textSize="20dp"
-        android:text="@{user.name}"
-        tools:text="jetPack_databinding"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="20dp"
+            android:text="@{viewmodel.currentName}"
+            tools:text="jetPack_databinding"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/image"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:src="@mipmap/ic_launcher"-->
+<!--            app:imageUrl="@{}"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv"/>-->
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={viewmodel.currentName}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
