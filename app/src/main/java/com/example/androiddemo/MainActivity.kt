@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androiddemo.ViewSelf.SelfViewActivity
+import com.example.androiddemo.activity.AdapterActivity
 import com.example.androiddemo.activity.NotificationActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.circle.CirCleActivity
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         btn_jetPack.setOnClickListener {
             startActivity(Intent(this, NewJetPackActivity::class.java))
         }
-        btn_remoteViews_notification.setOnClickListener { startActivity((Intent(this, NotificationActivity::class.java))) }
+        btn_remoteViews_notification.setOnClickListener { startActivity((Intent(this, AdapterActivity::class.java))) }
     }
 
     private fun initScrollView() {

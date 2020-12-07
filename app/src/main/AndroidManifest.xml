@@ -45,6 +45,7 @@
         <activity android:name=".jetPack.JetPackActivity"/>
         <activity android:name=".activity.NotificationActivity"/>
         <activity android:name=".jetPack.NewJetPackActivity"/>
+        <activity android:name=".activity.AdapterActivity"/>
 
 
         <provider
