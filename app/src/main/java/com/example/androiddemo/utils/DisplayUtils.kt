@@ -11,7 +11,7 @@ import android.view.WindowManager
  * email：mlsnatalie@163.com
  * description：与屏幕信息有关的类，包括屏幕的长宽、分辨率、长度换算
  */
-class DisplayUtils {
+object DisplayUtils {
 
     /**
      * 获取状态栏高度

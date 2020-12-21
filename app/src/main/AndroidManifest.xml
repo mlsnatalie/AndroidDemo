@@ -47,6 +47,7 @@
         <activity android:name=".jetPack.NewJetPackActivity"/>
         <activity android:name=".activity.AdapterActivity"/>
         <activity android:name=".activity.ToolBarActivity"/>
+        <activity android:name=".activity.UpDownBalActivity"/>
 
 
         <provider
