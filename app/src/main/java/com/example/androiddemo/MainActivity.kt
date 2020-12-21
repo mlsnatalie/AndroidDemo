@@ -7,6 +7,7 @@ import android.util.Log
 import com.example.androiddemo.ViewSelf.SelfViewActivity
 import com.example.androiddemo.activity.AdapterActivity
 import com.example.androiddemo.activity.NotificationActivity
+import com.example.androiddemo.activity.ToolBarActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.circle.CirCleActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
@@ -93,6 +94,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, NewJetPackActivity::class.java))
         }
         btn_remoteViews_notification.setOnClickListener { startActivity((Intent(this, AdapterActivity::class.java))) }
+        btn_toolbar.setOnClickListener { startActivity(Intent(this, ToolBarActivity::class.java)) }
     }
 
     private fun initScrollView() {
