@@ -48,6 +48,8 @@
         <activity android:name=".activity.AdapterActivity"/>
         <activity android:name=".activity.ToolBarActivity"/>
         <activity android:name=".activity.UpDownBalActivity"/>
+        <activity android:name=".coordinatorLayout.CollapsingToolbarActivity"/>
+        <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity"/>
 
 
         <provider
