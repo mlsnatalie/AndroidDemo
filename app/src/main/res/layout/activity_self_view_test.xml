@@ -13,4 +13,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
+    <View
+        android:id="@+id/layout_view_animation"
+        android:layout_width="20pt"
+        android:layout_height="20pt"
+        android:background="@color/color_999999"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_animation_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动画改变颜色属性"
+        android:textColor="@color/color_999999"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
