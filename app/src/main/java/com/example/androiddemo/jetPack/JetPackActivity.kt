@@ -2,6 +2,7 @@ package com.example.androiddemo.jetPack
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.androiddemo.R
 import kotlinx.android.synthetic.main.activity_jetpack.*
@@ -21,13 +22,15 @@ class JetPackActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jetpack)
-        viewModel = ViewModelProvider(this).get(viewModel::class.java)
-        btn_plus.setOnClickListener { viewModel.count++ }
+        viewModel = ViewModelProvider(this).get(JetPackViewModel::class.java)
+        btn_plus.setOnClickListener {
+            viewModel.count++
+        }
         refreshCounter()
     }
 
     private fun refreshCounter() {
-        btn_plus.tv.text = viewModel.count.toString()
+        tv.text = viewModel.count.toString()
 
     }
 }
