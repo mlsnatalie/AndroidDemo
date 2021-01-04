@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androiddemo.ViewSelf.SelfViewActivity
-import com.example.androiddemo.activity.AdapterActivity
-import com.example.androiddemo.activity.NotificationActivity
-import com.example.androiddemo.activity.ToolBarActivity
-import com.example.androiddemo.activity.UpDownBalActivity
+import com.example.androiddemo.activity.*
 import com.example.androiddemo.advance.AdvanceActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.circle.CirCleActivity
@@ -99,6 +96,7 @@ class MainActivity : AppCompatActivity() {
         btn_toolbar.setOnClickListener { startActivity(Intent(this, ToolBarActivity::class.java)) }
         btn_up_down_bal.setOnClickListener { startActivity(Intent(this, UpDownBalActivity::class.java)) }
         btn_advance.setOnClickListener { startActivity(Intent(this, AdvanceActivity::class.java)) }
+        btn_jit_pack.setOnClickListener { startActivity(Intent(this, JitPackActivity::class.java)) }
     }
 
     private fun initScrollView() {

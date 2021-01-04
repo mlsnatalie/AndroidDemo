@@ -51,6 +51,7 @@
         <activity android:name=".coordinatorLayout.CollapsingToolbarActivity"/>
         <activity android:name=".advance.AdvanceActivity"/>
         <activity android:name=".advance.ViewActivity"/>
+        <activity android:name=".activity.JitPackActivity"/>
 
 
         <provider
