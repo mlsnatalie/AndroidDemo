@@ -26,11 +26,11 @@ class JetPackActivity : AppCompatActivity() {
         btn_plus.setOnClickListener {
             viewModel.count++
         }
+        btn_plus.setOnClickListener { viewModel.count++ }
         refreshCounter()
     }
 
     private fun refreshCounter() {
         tv.text = viewModel.count.toString()
-
     }
 }

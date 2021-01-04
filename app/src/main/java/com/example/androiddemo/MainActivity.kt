@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.androiddemo.ViewSelf.SelfViewActivity
+import com.example.androiddemo.activity.*
+import com.example.androiddemo.advance.AdvanceActivity
 import com.example.androiddemo.animation.AnimationActivity
 import com.example.androiddemo.circle.CirCleActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
@@ -12,6 +14,7 @@ import com.example.androiddemo.draw.DrawActivity
 import com.example.androiddemo.edittext.EditTextActivity
 import com.example.androiddemo.fragment.NewFragmentActivity
 import com.example.androiddemo.jetPack.JetPackActivity
+import com.example.androiddemo.jetPack.NewJetPackActivity
 import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.okhttp.OkhttpActivity
@@ -34,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_demo)
         initListener()
         initScrollView()
-
     }
 
     private fun initListener() {
@@ -88,8 +90,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, OkhttpActivity::class.java))
         }
         btn_jetPack.setOnClickListener {
-            startActivity(Intent(this, JetPackActivity::class.java))
+            startActivity(Intent(this, NewJetPackActivity::class.java))
         }
+        btn_remoteViews_notification.setOnClickListener { startActivity((Intent(this, AdapterActivity::class.java))) }
+        btn_toolbar.setOnClickListener { startActivity(Intent(this, ToolBarActivity::class.java)) }
+        btn_up_down_bal.setOnClickListener { startActivity(Intent(this, UpDownBalActivity::class.java)) }
+        btn_advance.setOnClickListener { startActivity(Intent(this, AdvanceActivity::class.java)) }
+        btn_jit_pack.setOnClickListener { startActivity(Intent(this, JitPackActivity::class.java)) }
     }
 
     private fun initScrollView() {

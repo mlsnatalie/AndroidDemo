@@ -9,6 +9,6 @@ import androidx.lifecycle.ViewModel
  * email：mlsnatalie@163.com
  * description：
  */
-class JetPackViewModel : ViewModel() {
+class JetPackViewModel() : ViewModel() {
     var count = 0 //用于计数
 }
