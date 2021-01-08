@@ -23,6 +23,9 @@ class JetPackActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jetpack)
         viewModel = ViewModelProvider(this).get(JetPackViewModel::class.java)
+        btn_plus.setOnClickListener {
+            viewModel.count++
+        }
         btn_plus.setOnClickListener { viewModel.count++ }
         refreshCounter()
     }
