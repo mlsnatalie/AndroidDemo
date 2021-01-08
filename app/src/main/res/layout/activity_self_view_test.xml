@@ -4,6 +4,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <com.example.androiddemo.advance.component.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title_text="自定义组合控件"
+        app:title_bg="@android:color/holo_orange_dark"
+        app:title_text_color="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.example.androiddemo.advance.component.TitleBar>
+
     <com.example.androiddemo.advance.component.CustomView
         android:id="@+id/custom_view"
         android:layout_width="80dp"
@@ -29,5 +40,28 @@
         android:textColor="@color/color_999999"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.example.androiddemo.advance.component.InvalidTextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/color_999999"
+        android:text="InvalidTextView"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.androiddemo.advance.component.RectView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="220dp"
+        android:padding="10dp"
+        app:rect_color="@color/color_3C69FA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
