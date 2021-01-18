@@ -35,6 +35,15 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_CoordinatorLayout" />
 
+            <Button
+                android:id="@+id/btn_self_view_point_line_rect"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="测试自定义view-绘制点，线，矩形"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_self_view" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.example.androiddemo.utils.ObservableScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

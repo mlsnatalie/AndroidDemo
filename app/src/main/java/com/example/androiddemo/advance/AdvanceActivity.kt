@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import butterknife.OnClick
 import com.example.androiddemo.R
+import com.example.androiddemo.activity.PointLineRectActivity
 import com.example.androiddemo.coordinatorLayout.CoordinatorLayoutActivity
 import kotlinx.android.synthetic.main.activity_advance.*
 
@@ -22,6 +23,7 @@ class AdvanceActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_advance)
         btn_CoordinatorLayout.setOnClickListener(this)
         btn_self_view.setOnClickListener(this)
+        btn_self_view_point_line_rect.setOnClickListener(this)
     }
 
 //    @OnClick(R.id.btn_CoordinatorLayout, R.id.btn_self_view)
@@ -33,8 +35,9 @@ class AdvanceActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_self_view -> {
                 startActivity(Intent(this, ViewActivity::class.java))
             }
-
+            R.id.btn_self_view_point_line_rect -> {
+                startActivity(Intent(this, PointLineRectActivity::class.java))
+            }
         }
-
     }
 }
