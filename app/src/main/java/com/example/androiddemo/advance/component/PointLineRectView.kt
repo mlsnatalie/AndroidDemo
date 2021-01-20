@@ -2,12 +2,10 @@ package com.example.androiddemo.advance.component
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.BitmapFactory
-import android.graphics.Canvas
-import android.graphics.Rect
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import com.example.androiddemo.R
+
 
 /**
  * @author: mlsnatalie
@@ -99,7 +97,7 @@ class PointLineRectView @JvmOverloads constructor(
 
         //6.绘制位图bitmap
 
-        val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.icon_pic)
+//        val bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.icon_pic)
 
         // 后两个参数matrix, paint是在绘制时对图片进行一些改变
         // 后面会专门说matrix
@@ -128,13 +126,123 @@ class PointLineRectView @JvmOverloads constructor(
         // 实例
         // 指定图片绘制区域
         // 仅绘制图片的二分之一
-        val src = Rect(0, 0, bitmap.width, bitmap.height)
+//        val src = Rect(0, 0, bitmap.width, bitmap.height)
+//
+//        // 指定图片在屏幕上显示的区域
+//        val dst = Rect(100, 100, 1000, 1500)
+//
+//        // 绘制图片
+//        canvas?.drawBitmap(bitmap, src, dst, null)
 
-        // 指定图片在屏幕上显示的区域
-        val dst = Rect(100, 100, 1000, 1500)
+        //7.Path的使用
+        val path = Path()
+        val paint = Paint()
+        paint.color = Color.RED
+        paint.strokeWidth = 10f
+        paint.style = Paint.Style.STROKE
 
-        // 绘制图片
-        canvas?.drawBitmap(bitmap, src, dst, null)
+//        path.lineTo(400f, 500f);
+//
+//        // 将当前点移动到(300, 300)
+//        path.moveTo(300f, 300f);
+//
+//        //连接点(900, 800)
+//        path.lineTo(900f, 800f);
+//
+//        path.lineTo(200f, 700f)
+//        // 闭合路径，即连接当前点和起点
+//        // 即连接(200,700)与起点2(300, 300)
+//        // 注:此时起点已经进行变换
+//        path.close();
+//
+//        // 画出路径
+//        canvas?.drawPath(path, paint);
+
+
+//        path.lineTo(400f, 500f)
+//        path.setLastPoint(300f, 300f)
+//        //连接点(900, 800)
+//        path.lineTo(900f, 800f);
+//        path.lineTo(200f, 700f)
+//        path.close();
+//        canvas?.drawPath(path, paint);
+
+
+//
+//        canvas?.translate(400f, 500f);
+//        // 起点是(0,0)，连接点(-100,0)
+//        path.lineTo(-100f, 0f);
+//        // 连接点(-100,200)
+//        path.lineTo(-100f, 200f);
+//        // 连接点(200,200)
+//        path.lineTo(200f, 200f);
+//        // 闭合路径，即连接当前点和起点
+//        // 即连接(200,200)与起点是(0,0)
+//        path.close();
+//
+//        // 画出路径
+//        canvas?.drawPath(path, paint);
+
+        // 将Canvas坐标系移到屏幕正中
+//        canvas?.translate(400f, 500f);
+//
+//        // 起点是(0,0)，连接点(-100,0)
+//        path.lineTo(-100f, 0f);
+//        // 画圆：圆心=(0,0)，半径=100px
+//        // 此时路径起点改变 = (0,100)（记为起点2）
+//        // 起点改变原则：新画图形在x轴正方向的最后一个坐标
+//        // 后面路径的变化以这个点继续下去
+//        path.addCircle(0f, 0f, 100f, Path.Direction.CCW);
+//
+//        // 起点为：(0,100)，连接 (-100,200)
+//        path.lineTo(-100f, 200f);
+//        // 连接 (200,200)
+//        path.lineTo(200f, 200f);
+//
+//        // 闭合路径，即连接当前点和起点（注：闭合的是起点2）
+//        // 即连接(200,200)与起点2(0,100)
+//        path.close();
+//
+//        // 画出路径
+//        canvas?.drawPath(path, paint);
+
+
+        // 将一个圆弧路径添加到一条直线路径里
+
+        // 为了方便观察,平移坐标系
+        // 将一个圆弧路径添加到一条直线路径里
+
+        // 为了方便观察,平移坐标系
+        canvas!!.translate(350f, 500f)
+
+        // 先将原点(0,0)连接点(100,100)
+
+        // 先将原点(0,0)连接点(100,100)
+        path.lineTo(50f, 200f)
+
+// 添加圆弧路径(2分之1圆弧)
+
+        // 不连接最后一个点与圆弧起点
+
+// 添加圆弧路径(2分之1圆弧)
+
+        // 不连接最后一个点与圆弧起点
+//        path.addArc(RectF(200f, 200f, 300f, 300f), 0f, 180f)
+        // path.arcTo(oval,0,270,true);             // 与上面一句作用等价
+
+        // 连接之前路径的结束点与圆弧起点
+        // path.arcTo(oval,0,270,true);             // 与上面一句作用等价
+
+        // 连接之前路径的结束点与圆弧起点
+        path.arcTo(RectF(200f, 200f, 300f, 300f), 0f, 180f)
+        // path.arcTo(oval,0,270,false);             // 与上面一句作用等价
+
+        // 画出路径
+        // path.arcTo(oval,0,270,false);             // 与上面一句作用等价
+
+        // 画出路径
+        canvas?.drawPath(path, paint)
+
 
     }
 }
