@@ -19,6 +19,7 @@ import com.example.androiddemo.lambda.LambdaActivity
 import com.example.androiddemo.matisseRxpermission.MatisseRxPermissionActivity
 import com.example.androiddemo.okhttp.OkhttpActivity
 import com.example.androiddemo.rotate.RotateAnimationActivity
+import com.example.androiddemo.rxjava.NRxjavaActivity
 import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
 import com.example.androiddemo.utils.ObservableScrollView.OnScrollStatusListener
@@ -53,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FourActivity::class.java))
         }
         btn_rx_java.setOnClickListener {
-            startActivity(Intent(this, RxJavaActivity::class.java))
+            startActivity(Intent(this, NRxjavaActivity::class.java))
         }
         btn_Matisse_rxPermission.setOnClickListener {
             startActivity(Intent(this, MatisseRxPermissionActivity::class.java))

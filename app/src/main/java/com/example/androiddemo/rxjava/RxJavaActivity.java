@@ -25,7 +25,7 @@ public class RxJavaActivity extends AppCompatActivity {
     private String TAG = "RxJava";
     private Observable<Integer> observable;
     private Observer<Integer> observer;
-    private Integer i;
+    private Integer i = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

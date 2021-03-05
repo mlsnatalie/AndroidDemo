@@ -14,7 +14,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.GlobalScopeActivity2">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -53,6 +53,8 @@
         <activity android:name=".advance.ViewActivity"/>
         <activity android:name=".activity.JitPackActivity"/>
         <activity android:name=".activity.PointLineRectActivity"/>
+        <activity android:name=".rxjava.RxJavaActivity"/>
+        <activity android:name=".rxjava.NRxjavaActivity"/>
 <!--        <activity android:name=".activity.GlobalScopeActivity"/>-->
 
 
