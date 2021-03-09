@@ -24,6 +24,7 @@ import com.example.androiddemo.rxjava.RxJavaActivity
 import com.example.androiddemo.sp.SpActivity
 import com.example.androiddemo.utils.ObservableScrollView.OnScrollStatusListener
 import com.example.androiddemo.viewPager.FourActivity
+import com.example.androiddemo.xiangxue.activity.XiangXueActivity
 import kotlinx.android.synthetic.main.activity_main_demo.*
 
 class MainActivity : AppCompatActivity() {
@@ -98,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         btn_up_down_bal.setOnClickListener { startActivity(Intent(this, UpDownBalActivity::class.java)) }
         btn_advance.setOnClickListener { startActivity(Intent(this, AdvanceActivity::class.java)) }
         btn_jit_pack.setOnClickListener { startActivity(Intent(this, JitPackActivity::class.java)) }
+        btn_room.setOnClickListener { startActivity(Intent(this, XiangXueActivity::class.java)) }
     }
 
     private fun initScrollView() {
