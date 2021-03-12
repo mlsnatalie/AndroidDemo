@@ -58,6 +58,8 @@
 <!--        <activity android:name=".activity.GlobalScopeActivity"/>-->
         <activity android:name=".xiangxue.activity.RetrofitTestActivity"/>
         <activity android:name=".xiangxue.activity.XiangXueActivity"/>
+        <activity android:name=".activity.NormalActivity"/>
+        <activity android:name=".activity.InjectH5Activity"/>
 
 
         <provider
