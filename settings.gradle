@@ -1,2 +1,3 @@
+include ':myapplication'
 include ':lib'
 include ':app'

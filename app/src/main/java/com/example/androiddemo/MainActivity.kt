@@ -1,5 +1,6 @@
 package com.example.androiddemo
 
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -82,7 +83,19 @@ class MainActivity : AppCompatActivity() {
 //        btn_advance.setOnClickListener { startActivity(Intent(this, AdvanceActivity::class.java)) }
 //        btn_jit_pack.setOnClickListener { startActivity(Intent(this, JitPackActivity::class.java)) }
         btn_room.setOnClickListener { startActivity(Intent(this, XiangXueActivity::class.java)) }
-        btn_normal.setOnClickListener { startActivity(Intent(this, NormalActivity::class.java)) }
+//        btn_normal.setOnClickListener { startActivity(Intent(this, NormalActivity::class.java)) }
+        btn_normal.setOnClickListener {
+            val intent = Intent()
+            intent.setComponent(ComponentName("com.jindashi.myapplication", "com.jindashi.myapplication.AActivity"))
+//            intent.action = "android.intent.action.MAIN"
+//            intent.addCategory(Intent.CATEGORY_DEFAULT)
+            startActivity(intent)
+
+//            Intent intent = new Intent();
+//            intent.setComponent(new ComponentName("com.dahuatech.tianjintest",
+//                "com.dahuatech.tianjintest.MainActivity"));
+//            startActivity(intent);
+        }
     }
 
     private fun initScrollView() {
