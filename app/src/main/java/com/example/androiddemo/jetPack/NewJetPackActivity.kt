@@ -36,6 +36,7 @@ class NewJetPackActivity : AppCompatActivity() {
 //        val binding: ActivityNewJetpackBinding = DataBindingUtil.setContentView(this, R.layout.activity_new_jetpack)
 //        binding.user = User("xys", "")
         binding.viewmodel = userModel
+        binding.lifecycleOwner = this
 
         myLayoutLocationListener = MyLocationListener(this) {
             location -> {}

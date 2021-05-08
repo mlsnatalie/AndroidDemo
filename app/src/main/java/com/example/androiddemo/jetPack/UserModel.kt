@@ -12,12 +12,15 @@ import androidx.lifecycle.ViewModel
  */
 class UserModel : ViewModel() {
 
-    val currentName: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
-    }
+    var currentName: MutableLiveData<String> = MutableLiveData()
 
     init {
         currentName.value = "zzz"
     }
+
+    fun changeTitle(string: Int) {
+        currentName.value = string.toString()
+    }
+
 
 }

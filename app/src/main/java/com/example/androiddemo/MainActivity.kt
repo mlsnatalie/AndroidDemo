@@ -85,16 +85,7 @@ class MainActivity : AppCompatActivity() {
         btn_room.setOnClickListener { startActivity(Intent(this, XiangXueActivity::class.java)) }
 //        btn_normal.setOnClickListener { startActivity(Intent(this, NormalActivity::class.java)) }
         btn_normal.setOnClickListener {
-            val intent = Intent()
-            intent.setComponent(ComponentName("com.jindashi.myapplication", "com.jindashi.myapplication.AActivity"))
-//            intent.action = "android.intent.action.MAIN"
-//            intent.addCategory(Intent.CATEGORY_DEFAULT)
-            startActivity(intent)
-
-//            Intent intent = new Intent();
-//            intent.setComponent(new ComponentName("com.dahuatech.tianjintest",
-//                "com.dahuatech.tianjintest.MainActivity"));
-//            startActivity(intent);
+            startActivity(Intent(this, NormalActivity::class.java))
         }
     }
 
