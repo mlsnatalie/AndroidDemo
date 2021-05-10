@@ -25,7 +25,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:text="@{vm.currentTitle}"
-            android:onClick="@{()->vm.changeTitle(String.valueOf(11111))}"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

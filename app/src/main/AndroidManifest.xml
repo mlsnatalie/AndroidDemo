@@ -14,7 +14,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.IntentServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -61,6 +61,7 @@
         <activity android:name=".activity.NormalActivity"/>
         <activity android:name=".activity.InjectH5Activity"/>
 <!--        <activity android:name=".xiangxue.activity.JetPackActivity"/>-->
+<!--        <activity android:name=".activity.IntentServiceActivity"/>-->
 
 
         <provider
