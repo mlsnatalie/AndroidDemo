@@ -53,7 +53,8 @@
         <activity android:name=".advance.ViewActivity"/>
         <activity android:name=".activity.JitPackActivity"/>
         <activity android:name=".activity.PointLineRectActivity"/>
-        <activity android:name=".rxjava.RxJavaActivity"/>
+        <activity android:name=".rxjava.RxJavaActivity"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".rxjava.NRxjavaActivity"/>
 <!--        <activity android:name=".activity.GlobalScopeActivity"/>-->
         <activity android:name=".xiangxue.activity.RetrofitTestActivity"/>
@@ -62,6 +63,9 @@
         <activity android:name=".activity.InjectH5Activity"/>
 <!--        <activity android:name=".xiangxue.activity.JetPackActivity"/>-->
 <!--        <activity android:name=".activity.IntentServiceActivity"/>-->
+
+        <service android:name=".MyIntentService"
+            tools:ignore="Instantiatable" />
 
 
         <provider

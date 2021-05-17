@@ -6,10 +6,11 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.ImageView;
 
+import com.example.androiddemo.MyIntentService;
 import com.example.androiddemo.R;
-import com.example.androiddemo.service.MyIntentService;
 
 /**
  * @author: mlsnatalie
@@ -37,6 +38,7 @@ public class IntentServiceActivity extends Activity implements MyIntentService.U
     private static final Handler mUIHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
+            Log.e("aaaddd", Thread.currentThread().toString());//在主线程里
             imageView.setImageBitmap((Bitmap) msg.obj);
         }
     };
@@ -47,6 +49,9 @@ public class IntentServiceActivity extends Activity implements MyIntentService.U
         setContentView(R.layout.activity_intent_service);
         imageView = (ImageView) findViewById(R.id.image);
 
+        /**
+         * IntentService是异步线程。放入队列里面
+         */
         Intent intent = new Intent(this,MyIntentService.class);
         for (int i=0;i<7;i++) {//循环启动任务
             intent.putExtra(MyIntentService.DOWNLOAD_URL,url[i]);
