@@ -14,7 +14,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.example.androiddemo.xiangxue.activity.MainLiveDataActivity">
+        <activity android:name="com.example.androiddemo.activity.JiuXinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -64,6 +64,7 @@
 <!--        <activity android:name=".xiangxue.activity.JetPackActivity"/>-->
 <!--        <activity android:name=".activity.IntentServiceActivity"/>-->
 <!--        <activity android:name="com.example.androiddemo.xiangxue.activity.MainLiveDataActivity"/>-->
+<!--        <activity android:name="com.example.androiddemo.activity.JiuXinActivity"/>-->
 
         <service android:name=".MyIntentService"
             tools:ignore="Instantiatable" />
